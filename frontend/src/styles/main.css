@@ -1,0 +1,94 @@
+/* 全局基础样式 */
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  background: #f0f2f5;
+  color: #303133;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 主布局 */
+.layout {
+  height: 100%;
+}
+.aside {
+  background: #1f2d3d;
+  transition: width 0.28s ease;
+  overflow: hidden;
+}
+.aside .el-menu {
+  border-right: none;
+}
+.logo {
+  height: 60px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ebeef5;
+  padding: 0 16px;
+}
+.collapse-btn {
+  font-size: 20px;
+  cursor: pointer;
+  color: #5a5e66;
+}
+.spacer {
+  flex: 1;
+}
+.user-trigger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #303133;
+}
+.main {
+  padding: 16px;
+  background: #f0f2f5;
+}
+
+/* 路由切换动画 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0c4cc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}

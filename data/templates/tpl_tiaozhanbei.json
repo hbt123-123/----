@@ -1,0 +1,27 @@
+{
+  "id": "tpl_tiaozhanbei",
+  "name": "挑战杯",
+  "stages": [
+    {
+      "order": 1,
+      "name": "院级申报",
+      "duration_days": 20,
+      "materials": [
+        "作品申报书",
+        "汇总表"
+      ],
+      "need_defense": false
+    },
+    {
+      "order": 2,
+      "name": "校级答辩",
+      "duration_days": 30,
+      "materials": [
+        "答辩PPT",
+        "作品说明",
+        "展示视频"
+      ],
+      "need_defense": true
+    }
+  ]
+}

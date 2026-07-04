@@ -1,0 +1,38 @@
+{
+  "id": "tpl_dachuang",
+  "name": "大创项目",
+  "stages": [
+    {
+      "order": 1,
+      "name": "申报阶段",
+      "duration_days": 30,
+      "materials": [
+        "项目申报书",
+        "诚信承诺书",
+        "汇总表"
+      ],
+      "need_defense": false
+    },
+    {
+      "order": 2,
+      "name": "中期检查",
+      "duration_days": 90,
+      "materials": [
+        "中期检查报告",
+        "阶段性成果"
+      ],
+      "need_defense": false
+    },
+    {
+      "order": 3,
+      "name": "结题答辩",
+      "duration_days": 60,
+      "materials": [
+        "结题报告",
+        "结题答辩PPT",
+        "成果附件"
+      ],
+      "need_defense": true
+    }
+  ]
+}
