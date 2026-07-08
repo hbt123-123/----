@@ -32,6 +32,18 @@ const routes = [
         meta: { title: '模板管理', roles: ['部长', '副部长'] },
       },
       {
+        path: 'projects',
+        name: 'projects',
+        component: () => import('@/views/Projects.vue'),
+        meta: { title: '项目管理', roles: ['部长', '副部长'] },
+      },
+      {
+        path: 'projects/:id',
+        name: 'project-detail',
+        component: () => import('@/views/ProjectDetail.vue'),
+        meta: { title: '项目详情', roles: ['部长', '副部长'] },
+      },
+      {
         path: 'profile',
         name: 'profile',
         component: () => import('@/views/Profile.vue'),

@@ -5,7 +5,7 @@
     {
       "order": 1,
       "name": "院级申报",
-      "duration_days": 20,
+      "due_date": "2026-11-15 23:59",
       "materials": [
         "作品申报书",
         "汇总表"
@@ -15,7 +15,7 @@
     {
       "order": 2,
       "name": "校级答辩",
-      "duration_days": 30,
+      "due_date": "2026-12-20 23:59",
       "materials": [
         "答辩PPT",
         "作品说明",

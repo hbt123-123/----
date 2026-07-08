@@ -5,7 +5,7 @@
     {
       "order": 1,
       "name": "立项申报",
-      "duration_days": 15,
+      "due_date": "2026-07-15 23:59",
       "materials": [
         "立项申报书",
         "安全责任书"
@@ -15,7 +15,7 @@
     {
       "order": 2,
       "name": "实践开展",
-      "duration_days": 45,
+      "due_date": "2026-08-31 23:59",
       "materials": [
         "实践日志",
         "新闻稿"
@@ -25,7 +25,7 @@
     {
       "order": 3,
       "name": "总结评比",
-      "duration_days": 20,
+      "due_date": "2026-09-20 23:59",
       "materials": [
         "总结报告",
         "调研报告",

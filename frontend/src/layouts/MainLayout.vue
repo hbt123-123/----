@@ -22,6 +22,9 @@
         <el-menu-item v-if="auth.isStaff" index="/templates">
           <el-icon><Document /></el-icon><span>模板管理</span>
         </el-menu-item>
+        <el-menu-item v-if="auth.isStaff" index="/projects">
+          <el-icon><Files /></el-icon><span>项目管理</span>
+        </el-menu-item>
         <el-menu-item index="/profile">
           <el-icon><Setting /></el-icon><span>个人中心</span>
         </el-menu-item>

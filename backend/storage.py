@@ -67,3 +67,13 @@ def list_json_files(dir_rel):
     if not os.path.isdir(p):
         return []
     return [f for f in os.listdir(p) if f.endswith('.json')]
+
+
+def delete_file(rel):
+    """删除文件(不存在时忽略)。"""
+    p = _abs(rel)
+    try:
+        os.remove(p)
+    except FileNotFoundError:
+        pass
+    return True

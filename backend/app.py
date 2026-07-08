@@ -16,6 +16,10 @@ from auth import ensure_admin
 from routes.auth import bp as auth_bp
 from routes.users import bp as users_bp
 from routes.templates import bp as templates_bp
+from routes.projects import bp as projects_bp
+from routes.teams import bp as teams_bp
+from routes.tasks import bp as tasks_bp
+from routes.export import bp as export_bp
 
 
 def create_app():
@@ -34,6 +38,10 @@ def create_app():
     app.register_blueprint(auth_bp)
     app.register_blueprint(users_bp)
     app.register_blueprint(templates_bp)
+    app.register_blueprint(projects_bp)
+    app.register_blueprint(teams_bp)
+    app.register_blueprint(tasks_bp)
+    app.register_blueprint(export_bp)
 
     @app.get('/api/health')
     def health():

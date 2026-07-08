@@ -4,12 +4,15 @@
       <div class="toolbar">
         <div class="title">比赛模板</div>
         <div class="actions">
+          <el-button type="primary" :icon="Plus" @click="openCreate">新建模板</el-button>
           <el-button :icon="Refresh" @click="load">刷新</el-button>
         </div>
       </div>
 
       <div v-loading="loading">
-        <el-empty v-if="!loading && !templates.length" description="还没有模板" />
+        <el-empty v-if="!loading && !templates.length" description="还没有模板">
+          <el-button type="primary" :icon="Plus" @click="openCreate">新建模板</el-button>
+        </el-empty>
 
         <el-row :gutter="16">
           <el-col
@@ -35,7 +38,7 @@
                 <el-timeline-item
                   v-for="(s, i) in t.stages"
                   :key="i"
-                  :timestamp="s.duration_days ? `建议 ${s.duration_days} 天` : '未设时长'"
+                  :timestamp="s.due_date ? '截止 ' + fmtDue(s.due_date) : '未设截止'"
                   placement="top"
                   :type="s.need_defense ? 'warning' : 'primary'"
                   :hollow="!s.need_defense"
@@ -56,24 +59,104 @@
                   <div v-else class="no-mat">无材料清单</div>
                 </el-timeline-item>
               </el-timeline>
+
+              <div class="card-actions">
+                <el-button v-if="auth.isAdmin" link type="primary" :icon="Edit" @click="openEdit(t)">编辑</el-button>
+                <el-button v-if="auth.isAdmin" link type="primary" :icon="CopyDocument" @click="onClone(t)">复制</el-button>
+                <el-button v-if="auth.isAdmin" link type="danger" :icon="Delete" @click="onDelete(t)">删除</el-button>
+                <span v-if="!auth.isAdmin" class="readonly-hint">仅部长可编辑</span>
+              </div>
             </el-card>
           </el-col>
         </el-row>
       </div>
     </el-card>
+
+    <el-dialog
+      v-model="dialog.visible"
+      :title="dialog.isEdit ? '编辑模板' : '新建模板'"
+      width="640px"
+      :close-on-click-modal="false"
+    >
+      <el-form :model="dialog.form" label-position="top">
+        <el-form-item label="模板名称" required>
+          <el-input v-model="dialog.form.name" placeholder="如:大创项目、挑战杯" />
+        </el-form-item>
+        <div class="stages-head">
+          <span class="stages-title">阶段清单</span>
+          <el-button size="small" :icon="Plus" @click="addStage">添加阶段</el-button>
+        </div>
+        <div v-for="(s, i) in dialog.form.stages" :key="i" class="stage-block">
+          <div class="stage-row">
+            <span class="stage-no">{{ i + 1 }}</span>
+            <el-input v-model="s.name" placeholder="阶段名称(如:申报阶段)" class="stage-name-input" />
+            <el-date-picker
+              v-model="s.due_date"
+              type="datetime"
+              format="YYYY-MM-DD HH:mm"
+              value-format="YYYY-MM-DD HH:mm"
+              placeholder="截止时间"
+              class="due-input"
+            />
+            <el-switch v-model="s.need_defense" inline-prompt active-text="答辩" class="defense-switch" />
+            <el-button link type="danger" :icon="Delete" @click="removeStage(i)" />
+          </div>
+          <el-select
+            v-model="s.materials"
+            multiple
+            filterable
+            allow-create
+            default-first-option
+            :reserve-keyword="false"
+            placeholder="材料清单(输入后回车添加,可多选)"
+            class="mat-select"
+          >
+            <el-option v-for="m in s.materials" :key="m" :label="m" :value="m" />
+          </el-select>
+        </div>
+        <el-empty v-if="!dialog.form.stages.length" description="还没有阶段,点击上方「添加阶段」" :image-size="50" />
+      </el-form>
+      <template #footer>
+        <el-button @click="dialog.visible = false">取消</el-button>
+        <el-button type="primary" :loading="dialog.saving" @click="onSave">保存</el-button>
+      </template>
+    </el-dialog>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { Refresh } from '@element-plus/icons-vue'
+import { ref, reactive, onMounted } from 'vue'
+import { Plus, Refresh, Edit, Delete, CopyDocument } from '@element-plus/icons-vue'
+import { ElMessage, ElMessageBox } from 'element-plus'
 import * as templatesApi from '@/api/templates'
+import { useAuthStore } from '@/stores/auth'
 
+const auth = useAuthStore()
 const templates = ref([])
 const loading = ref(false)
 
+const dialog = reactive({
+  visible: false,
+  isEdit: false,
+  saving: false,
+  tid: '',
+  form: { name: '', stages: [] },
+})
+
+function emptyStage() {
+  return { name: '', due_date: '', need_defense: false, materials: [] }
+}
+
 function hasDefense(t) {
   return (t.stages || []).some((s) => s.need_defense)
+}
+
+// "2026-10-31 23:59" → "10月31日 23:59"
+function fmtDue(d) {
+  if (!d) return ''
+  const m = String(d).match(/^(\d{4})-(\d{1,2})-(\d{1,2}) (\d{1,2}):(\d{2})/)
+  if (!m) return d
+  return `${parseInt(m[2], 10)}月${parseInt(m[3], 10)}日 ${m[4]}:${m[5]}`
 }
 
 async function load() {
@@ -83,6 +166,82 @@ async function load() {
   } finally {
     loading.value = false
   }
+}
+
+function openCreate() {
+  dialog.isEdit = false
+  dialog.tid = ''
+  dialog.form = { name: '', stages: [emptyStage()] }
+  dialog.visible = true
+}
+
+function openEdit(t) {
+  dialog.isEdit = true
+  dialog.tid = t.id
+  dialog.form = {
+    name: t.name,
+    stages: (t.stages || []).map((s) => ({
+      name: s.name,
+      due_date: s.due_date || '',
+      need_defense: !!s.need_defense,
+      materials: [...(s.materials || [])],
+    })),
+  }
+  dialog.visible = true
+}
+
+function addStage() {
+  dialog.form.stages.push(emptyStage())
+}
+
+function removeStage(i) {
+  dialog.form.stages.splice(i, 1)
+}
+
+async function onSave() {
+  if (!dialog.form.name.trim()) return ElMessage.warning('请输入模板名称')
+  const stages = dialog.form.stages.filter((s) => s.name.trim())
+  if (!stages.length) return ElMessage.warning('至少添加一个阶段')
+  const payload = {
+    name: dialog.form.name.trim(),
+    stages: stages.map((s) => ({
+      name: s.name.trim(),
+      due_date: s.due_date || '',
+      need_defense: !!s.need_defense,
+      materials: s.materials.map((m) => String(m).trim()).filter(Boolean),
+    })),
+  }
+  dialog.saving = true
+  try {
+    if (dialog.isEdit) {
+      await templatesApi.updateTemplate(dialog.tid, payload)
+      ElMessage.success('模板已更新')
+    } else {
+      await templatesApi.createTemplate(payload)
+      ElMessage.success('模板已创建')
+    }
+    dialog.visible = false
+    await load()
+  } finally {
+    dialog.saving = false
+  }
+}
+
+async function onClone(t) {
+  await templatesApi.cloneTemplate(t.id)
+  ElMessage.success(`已复制「${t.name}」为「${t.name} 副本」`)
+  await load()
+}
+
+async function onDelete(t) {
+  await ElMessageBox.confirm(
+    `确认删除模板「${t.name}」?该操作不可恢复。`,
+    '提示',
+    { type: 'warning' }
+  )
+  await templatesApi.deleteTemplate(t.id)
+  ElMessage.success('已删除')
+  await load()
 }
 
 onMounted(load)
@@ -151,5 +310,51 @@ onMounted(load)
 .no-mat {
   color: #909399;
   font-size: 12px;
+}
+.card-actions {
+  display: flex;
+  gap: 4px;
+  border-top: 1px solid #ebeef5;
+  margin-top: 12px;
+  padding-top: 10px;
+}
+.readonly-hint {
+  color: #909399;
+  font-size: 12px;
+}
+.stages-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.stages-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+.stage-block {
+  background: #f7f9fc;
+  border: 1px solid #ebeef5;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+.stage-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.stage-name-input {
+  flex: 1;
+}
+.due-input {
+  width: 200px;
+}
+.defense-switch {
+  margin-left: 4px;
+}
+.mat-select {
+  width: 100%;
 }
 </style>
