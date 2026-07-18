@@ -138,6 +138,7 @@ onMounted(load)
 .proj-name {
   font-size: 18px;
   font-weight: 600;
+  color: #0c0d0e;
 }
 .status-tag {
   margin-left: 10px;
@@ -149,9 +150,10 @@ onMounted(load)
   margin-bottom: 16px;
 }
 .section-title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   margin-bottom: 12px;
+  color: #0c0d0e;
 }
 .stage-line {
   padding: 4px 0 0 4px;
@@ -169,9 +171,10 @@ onMounted(load)
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #ecf5ff;
-  color: #409eff;
+  background: #ebf1ff;
+  color: #1664ff;
   font-size: 12px;
+  font-weight: 600;
 }
 .stage-name {
   font-weight: 500;
@@ -185,9 +188,6 @@ onMounted(load)
   margin-right: 4px;
 }
 .muted {
-  color: #909399;
-}
-.placeholder-card {
-  margin-bottom: 16px;
+  color: #c7ccd6;
 }
 </style>

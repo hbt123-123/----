@@ -223,13 +223,14 @@ onMounted(() => { load(); loadMeta() })
 .title {
   font-size: 15px;
   font-weight: 600;
+  color: #0c0d0e;
 }
 .actions {
   display: flex;
   gap: 8px;
 }
 .muted {
-  color: #909399;
+  color: #c7ccd6;
 }
 .file-cell {
   display: inline-flex;

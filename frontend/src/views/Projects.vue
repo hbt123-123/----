@@ -260,15 +260,16 @@ onMounted(load)
   margin-bottom: 16px;
 }
 .title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
+  color: #0c0d0e;
 }
 .actions {
   display: flex;
   gap: 8px;
 }
 .muted {
-  color: #909399;
+  color: #c7ccd6;
 }
 .owner-tag {
   margin-right: 4px;
@@ -300,11 +301,11 @@ onMounted(load)
   font-weight: 600;
 }
 .tpl-option-meta {
-  color: #909399;
+  color: #737a87;
   font-size: 12px;
 }
 .step-tip {
-  color: #909399;
+  color: #737a87;
   font-size: 13px;
   margin: 0 0 12px;
 }
@@ -321,9 +322,10 @@ onMounted(load)
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #ecf5ff;
-  color: #409eff;
+  background: #ebf1ff;
+  color: #1664ff;
   font-size: 12px;
+  font-weight: 600;
 }
 .stage-label {
   width: 100px;
@@ -333,6 +335,6 @@ onMounted(load)
   width: 180px;
 }
 .arrow {
-  color: #c0c4cc;
+  color: #c7ccd6;
 }
 </style>

@@ -80,6 +80,7 @@ onMounted(load)
 .title {
   font-size: 15px;
   font-weight: 600;
+  color: #0c0d0e;
 }
 .actions {
   display: flex;

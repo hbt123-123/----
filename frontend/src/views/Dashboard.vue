@@ -8,7 +8,7 @@
     >
       <div class="welcome">
         <div class="hello">你好,{{ auth.user?.name }} 👋</div>
-        <div class="role">当前角色:{{ auth.role }}</div>
+        <div class="role">当前角色: {{ auth.role }}</div>
         <div class="desc">欢迎使用创实部信息化管理平台。左侧菜单可进入相应功能模块。</div>
       </div>
     </el-card>
@@ -42,26 +42,32 @@ const auth = useAuthStore()
   gap: 16px;
 }
 .welcome .hello {
-  font-size: 22px;
-  font-weight: 700;
-  color: #1f2d3d;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0c0d0e;
 }
 .welcome .role {
-  color: #909399;
+  color: #737a87;
   margin-top: 6px;
+  font-size: 13px;
 }
 .welcome .desc {
-  color: #606266;
-  margin-top: 12px;
+  color: #42464e;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.7;
 }
 .tips-title {
   font-weight: 600;
   margin-bottom: 8px;
+  color: #0c0d0e;
+  font-size: 14px;
 }
 ul {
   margin: 0;
   padding-left: 20px;
-  color: #606266;
-  line-height: 1.9;
+  color: #42464e;
+  line-height: 2;
+  font-size: 13px;
 }
 </style>

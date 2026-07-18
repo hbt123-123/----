@@ -140,41 +140,43 @@ onMounted(loadCandidates)
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1f2d3d 0%, #324057 60%, #475669 100%);
+  background: linear-gradient(160deg, #0c0d0e 0%, #1d2129 40%, #2b303a 100%);
   padding: 20px;
 }
 .login-card {
   width: 100%;
   max-width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  border: none;
 }
 .brand {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 .brand-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #1f2d3d;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0c0d0e;
+  letter-spacing: 0.5px;
 }
 .brand-sub {
   font-size: 12px;
-  color: #909399;
-  margin-top: 6px;
+  color: #737a87;
+  margin-top: 8px;
 }
 .eye-btn {
   cursor: pointer;
 }
 .opt-sub {
-  color: #909399;
+  color: #737a87;
   font-size: 12px;
   margin: 0 4px;
 }
 .hint {
-  margin-top: 12px;
+  margin-top: 14px;
   font-size: 12px;
-  color: #e6a23c;
+  color: #bd7e00;
   text-align: center;
 }
 </style>

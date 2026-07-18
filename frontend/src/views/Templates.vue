@@ -255,8 +255,9 @@ onMounted(load)
   margin-bottom: 16px;
 }
 .title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
+  color: #0c0d0e;
 }
 .actions {
   display: flex;
@@ -274,8 +275,9 @@ onMounted(load)
   align-items: center;
 }
 .tpl-name {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
+  color: #0c0d0e;
 }
 .tpl-tags {
   display: flex;
@@ -298,9 +300,10 @@ onMounted(load)
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #ecf5ff;
-  color: #409eff;
-  font-size: 12px;
+  background: #ebf1ff;
+  color: #1664ff;
+  font-size: 11px;
+  font-weight: 600;
 }
 .materials {
   display: flex;
@@ -308,18 +311,18 @@ onMounted(load)
   gap: 6px;
 }
 .no-mat {
-  color: #909399;
+  color: #c7ccd6;
   font-size: 12px;
 }
 .card-actions {
   display: flex;
   gap: 4px;
-  border-top: 1px solid #ebeef5;
+  border-top: 1px solid #eaedf1;
   margin-top: 12px;
   padding-top: 10px;
 }
 .readonly-hint {
-  color: #909399;
+  color: #c7ccd6;
   font-size: 12px;
 }
 .stages-head {
@@ -330,12 +333,13 @@ onMounted(load)
 }
 .stages-title {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
+  color: #0c0d0e;
 }
 .stage-block {
-  background: #f7f9fc;
-  border: 1px solid #ebeef5;
-  border-radius: 6px;
+  background: #fafbfc;
+  border: 1px solid #eaedf1;
+  border-radius: 8px;
   padding: 10px 12px;
   margin-bottom: 10px;
 }

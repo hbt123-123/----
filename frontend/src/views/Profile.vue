@@ -61,7 +61,8 @@ async function onSubmit() {
   max-width: 720px;
 }
 .title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
+  color: #0c0d0e;
 }
 </style>

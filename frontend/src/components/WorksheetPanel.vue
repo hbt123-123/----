@@ -232,11 +232,12 @@ onMounted(load)
 .title {
   font-size: 15px;
   font-weight: 600;
+  color: #0c0d0e;
 }
 .sub {
   font-size: 12px;
   font-weight: normal;
-  color: #909399;
+  color: #a0a2a7;
   margin-left: 4px;
 }
 .actions {
@@ -250,15 +251,15 @@ onMounted(load)
   gap: 4px;
 }
 .auto-val.yes {
-  color: #67c23a;
+  color: #1ebf6f;
   font-weight: 600;
 }
 .auto-val.no {
-  color: #f56c6c;
+  color: #f65159;
   font-weight: 600;
 }
 .tip {
-  color: #909399;
+  color: #a0a2a7;
   font-size: 12px;
   margin: 4px 0 0;
 }

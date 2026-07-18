@@ -238,35 +238,37 @@ onMounted(loadTeams)
 .title {
   font-size: 15px;
   font-weight: 600;
+  color: #0c0d0e;
 }
 .actions {
   display: flex;
   gap: 8px;
 }
 .dropzone {
-  border: 2px dashed #c0c4cc;
-  border-radius: 8px;
-  padding: 24px;
+  border: 2px dashed #c7ccd6;
+  border-radius: 12px;
+  padding: 28px;
   text-align: center;
   transition: all 0.2s;
-  background: #fafafa;
+  background: #fafbfc;
 }
 .dropzone.dragging {
-  border-color: #409eff;
-  background: #ecf5ff;
+  border-color: #1664ff;
+  background: #ebf1ff;
 }
 .dropzone.busy {
   opacity: 0.6;
 }
 .dz-icon {
-  color: #909399;
+  color: #a0a2a7;
 }
 .dz-main {
   margin: 8px 0 4px;
-  font-size: 14px;
+  font-size: 13px;
+  color: #42464e;
 }
 .dz-hint {
-  color: #909399;
+  color: #a0a2a7;
   font-size: 12px;
   margin: 0;
 }
