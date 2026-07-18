@@ -47,11 +47,15 @@
       </el-timeline>
     </el-card>
 
-    <TeamPanel :pid="project.id" />
+    <TeamPanel v-if="project" :pid="project.id" />
 
-    <TaskPanel :pid="project.id" :stages="stages" />
+    <FilePanel v-if="project" :pid="project.id" />
 
-    <ExportPanel :pid="project.id" />
+    <TaskPanel v-if="project" :pid="project.id" :stages="stages" />
+
+    <ExportPanel v-if="project" :pid="project.id" />
+
+    <WorksheetPanel v-if="project" :pid="project.id" />
   </div>
 </template>
 
@@ -62,8 +66,10 @@ import { ArrowLeft } from '@element-plus/icons-vue'
 import * as projectsApi from '@/api/projects'
 import * as usersApi from '@/api/users'
 import TeamPanel from '@/components/TeamPanel.vue'
+import FilePanel from '@/components/FilePanel.vue'
 import TaskPanel from '@/components/TaskPanel.vue'
 import ExportPanel from '@/components/ExportPanel.vue'
+import WorksheetPanel from '@/components/WorksheetPanel.vue'
 
 const route = useRoute()
 const router = useRouter()

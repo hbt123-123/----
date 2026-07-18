@@ -20,6 +20,8 @@ from routes.projects import bp as projects_bp
 from routes.teams import bp as teams_bp
 from routes.tasks import bp as tasks_bp
 from routes.export import bp as export_bp
+from routes.files import bp as files_bp
+from routes.worksheets import bp as worksheets_bp
 
 
 def create_app():
@@ -42,6 +44,8 @@ def create_app():
     app.register_blueprint(teams_bp)
     app.register_blueprint(tasks_bp)
     app.register_blueprint(export_bp)
+    app.register_blueprint(files_bp)
+    app.register_blueprint(worksheets_bp)
 
     @app.get('/api/health')
     def health():

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""权限装饰器:登录校验、角色校验。项目/任务归属校验在后续阶段补充。"""
+"""权限装饰器:登录校验、角色校验。项目/任务归属校验在 routes/projects.py 的 load_project 中实现。"""
 from functools import wraps
 from flask import jsonify, request
 

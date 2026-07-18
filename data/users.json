@@ -7,18 +7,7 @@
     "contact": "",
     "is_admin": true,
     "activated": true,
-    "password_hash": "scrypt:32768:8:1$ZyOW7o5tUEC3hZEN$f89789ade6dcf29d4517a3239fe8615ff968813efaceea1e9433edbb370b0c1aede2c1eec5030a1324a4d72bb15d45e3c235c6fc48a6b08d3aa7623cc574100f",
-    "created_at": "2026-07-04T01:20:29.876936"
-  },
-  {
-    "id": "c3e884d0e397",
-    "name": "张三",
-    "role": "干事",
-    "student_id": "2021001",
-    "contact": "13800000000",
-    "is_admin": false,
-    "activated": false,
-    "password_hash": "",
-    "created_at": "2026-07-04T01:26:35.564924"
+    "password_hash": "scrypt:32768:8:1$xhZ7ZVgvTV8V4Rqv$e20426f966df5c56009c50ef692dd2eb7babc445c781026f9e61813deecd3c252187283f314538b5ffd4eab63412f74380d21925fee4496a2f812d561b47cd12",
+    "created_at": "2026-07-18T10:55:16.972538"
   }
 ]

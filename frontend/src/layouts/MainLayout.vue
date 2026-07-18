@@ -53,7 +53,7 @@
       <el-main class="main">
         <router-view v-slot="{ Component }">
           <transition name="fade" mode="out-in">
-            <component :is="Component" />
+            <component :is="Component" v-if="Component" />
           </transition>
         </router-view>
       </el-main>

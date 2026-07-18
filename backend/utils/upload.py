@@ -21,8 +21,12 @@ def save_upload(dir_, stage_name, team_name, filename, file_obj):
     if not safe_fn or safe_fn in ('.', '..'):
         return None, '文件名非法'
 
-    rel_dir = 'projects/{}/uploads/{}/{}'.format(
-        dir_, sanitize_name(stage_name) or '未分阶段', sanitize_name(team_name) or '未分团队')
+    s_team = sanitize_name(team_name) or '未分团队'
+    if stage_name:
+        rel_dir = 'projects/{}/uploads/{}/{}'.format(
+            dir_, sanitize_name(stage_name) or '未分阶段', s_team)
+    else:
+        rel_dir = 'projects/{}/uploads/{}'.format(dir_, s_team)
     abs_dir = safe_join(DATA_DIR, rel_dir)
     os.makedirs(abs_dir, exist_ok=True)
 
