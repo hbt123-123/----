@@ -1,0 +1,406 @@
+- generic [ref=e1]:
+  - generic [ref=e55]:
+    - complementary [ref=e56]:
+      - generic [ref=e58]: 创实部管理平台
+      - menubar [ref=e59]:
+        - menuitem "工作台" [ref=e60] [cursor=pointer]:
+          - img [ref=e62]
+          - generic [ref=e64]: 工作台
+        - menuitem "成员管理" [ref=e65] [cursor=pointer]:
+          - img [ref=e67]
+          - generic [ref=e69]: 成员管理
+        - menuitem "模板管理" [ref=e70] [cursor=pointer]:
+          - img [ref=e72]
+          - generic [ref=e74]: 模板管理
+        - menuitem "项目管理" [ref=e75] [cursor=pointer]:
+          - img [ref=e77]
+          - generic [ref=e79]: 项目管理
+        - menuitem "个人中心" [ref=e80] [cursor=pointer]:
+          - img [ref=e82]
+          - generic [ref=e84]: 个人中心
+    - generic [ref=e85]:
+      - generic [ref=e86]:
+        - img [ref=e88] [cursor=pointer]
+        - button "通知" [ref=e91] [cursor=pointer]:
+          - img [ref=e94]
+        - button "管理员 部长" [ref=e99] [cursor=pointer]:
+          - text: 管理员
+          - generic [ref=e101]: 部长
+          - img [ref=e103]
+      - main [ref=e105]:
+        - generic [ref=e416]:
+          - button "返回项目列表" [ref=e418] [cursor=pointer]:
+            - img [ref=e420]
+            - generic [ref=e422]: 返回项目列表
+          - generic [ref=e424]:
+            - generic [ref=e425]:
+              - generic [ref=e426]: 答辩演示项目
+              - generic [ref=e428]: 进行中
+            - table [ref=e431]:
+              - rowgroup [ref=e432]:
+                - row "使用模板 大创项目 年份 2026 级别 校级" [ref=e433]:
+                  - cell "使用模板" [ref=e434]
+                  - cell "大创项目" [ref=e435]
+                  - cell "年份" [ref=e436]
+                  - cell "2026" [ref=e437]
+                  - cell "级别" [ref=e438]
+                  - cell "校级" [ref=e439]
+                - row "负责副部长 管理员 创建时间 2026-07-18 项目目录 demo_2026" [ref=e440]:
+                  - cell "负责副部长" [ref=e441]
+                  - cell "管理员" [ref=e442]:
+                    - generic [ref=e445]: 管理员
+                  - cell "创建时间" [ref=e446]
+                  - cell "2026-07-18" [ref=e447]
+                  - cell "项目目录" [ref=e448]
+                  - cell "demo_2026" [ref=e449]
+          - generic [ref=e451]:
+            - generic [ref=e452]: 阶段清单
+            - list [ref=e453]:
+              - listitem [ref=e454]:
+                - generic [ref=e457]:
+                  - generic [ref=e458]: 起 9月1日 00:00 · 止 10月31日 23:59
+                  - generic [ref=e459]:
+                    - generic [ref=e460]:
+                      - generic [ref=e461]: "1"
+                      - generic [ref=e462]: 申报阶段
+                      - generic [ref=e464]: 进行中
+                    - generic [ref=e465]:
+                      - generic [ref=e467]: 项目申报书
+                      - generic [ref=e469]: 诚信承诺书
+                      - generic [ref=e471]: 汇总表
+              - listitem [ref=e472]:
+                - generic [ref=e475]:
+                  - generic [ref=e476]: 起 9月1日 00:00 · 止 3月31日 23:59
+                  - generic [ref=e477]:
+                    - generic [ref=e478]:
+                      - generic [ref=e479]: "2"
+                      - generic [ref=e480]: 中期检查
+                      - generic [ref=e482]: 进行中
+                    - generic [ref=e483]:
+                      - generic [ref=e485]: 中期检查报告
+                      - generic [ref=e487]: 阶段性成果
+              - listitem [ref=e488]:
+                - generic [ref=e490]:
+                  - generic [ref=e491]: 起 9月1日 00:00 · 止 6月30日 23:59
+                  - generic [ref=e492]:
+                    - generic [ref=e493]:
+                      - generic [ref=e494]: "3"
+                      - generic [ref=e495]: 结题答辩
+                      - generic [ref=e497]: 进行中
+                      - generic [ref=e499]: 答辩
+                    - generic [ref=e500]:
+                      - generic [ref=e502]: 结题报告
+                      - generic [ref=e504]: 结题答辩PPT
+                      - generic [ref=e506]: 成果附件
+          - generic [ref=e508]:
+            - generic [ref=e509]:
+              - generic [ref=e510]: 参赛团队
+              - generic [ref=e511]:
+                - button "批量导入" [ref=e513] [cursor=pointer]:
+                  - button "批量导入" [ref=e514]:
+                    - img [ref=e516]
+                    - generic [ref=e518]: 批量导入
+                - button "添加团队" [ref=e519] [cursor=pointer]:
+                  - img [ref=e521]
+                  - generic [ref=e523]: 添加团队
+            - generic [ref=e525]:
+              - table [ref=e527]:
+                - rowgroup [ref=e537]:
+                  - row "# 团队名称 队长 学号 联系方式 成员 指导老师 操作" [ref=e538]:
+                    - columnheader "#" [ref=e539]:
+                      - generic [ref=e540]: "#"
+                    - columnheader "团队名称" [ref=e541]:
+                      - generic [ref=e542]: 团队名称
+                    - columnheader "队长" [ref=e543]:
+                      - generic [ref=e544]: 队长
+                    - columnheader "学号" [ref=e545]:
+                      - generic [ref=e546]: 学号
+                    - columnheader "联系方式" [ref=e547]:
+                      - generic [ref=e548]: 联系方式
+                    - columnheader "成员" [ref=e549]:
+                      - generic [ref=e550]: 成员
+                    - columnheader "指导老师" [ref=e551]:
+                      - generic [ref=e552]: 指导老师
+                    - columnheader "操作" [ref=e553]:
+                      - generic [ref=e554]: 操作
+              - table [ref=e559]:
+                - rowgroup [ref=e569]:
+                  - row "1 绿水青山队 张三 2026001 13800000001 张三、李四、王五 赵老师 编辑 删除" [ref=e570]:
+                    - cell "1" [ref=e571]:
+                      - generic [ref=e573]: "1"
+                    - cell "绿水青山队" [ref=e574]:
+                      - generic [ref=e575]: 绿水青山队
+                    - cell "张三" [ref=e576]:
+                      - generic [ref=e577]: 张三
+                    - cell "2026001" [ref=e578]:
+                      - generic [ref=e579]: "2026001"
+                    - cell "13800000001" [ref=e580]:
+                      - generic [ref=e581]: "13800000001"
+                    - cell "张三、李四、王五" [ref=e582]:
+                      - generic [ref=e583]: 张三、李四、王五
+                    - cell "赵老师" [ref=e584]:
+                      - generic [ref=e585]: 赵老师
+                    - cell "编辑 删除" [ref=e586]:
+                      - generic [ref=e587]:
+                        - button "编辑" [ref=e588] [cursor=pointer]:
+                          - generic [ref=e589]: 编辑
+                        - button "删除" [ref=e590] [cursor=pointer]:
+                          - generic [ref=e591]: 删除
+                  - row "2 碳索未来队 钱六 2026002 13800000002 钱六、孙七 钱老师 编辑 删除" [ref=e592]:
+                    - cell "2" [ref=e593]:
+                      - generic [ref=e595]: "2"
+                    - cell "碳索未来队" [ref=e596]:
+                      - generic [ref=e597]: 碳索未来队
+                    - cell "钱六" [ref=e598]:
+                      - generic [ref=e599]: 钱六
+                    - cell "2026002" [ref=e600]:
+                      - generic [ref=e601]: "2026002"
+                    - cell "13800000002" [ref=e602]:
+                      - generic [ref=e603]: "13800000002"
+                    - cell "钱六、孙七" [ref=e604]:
+                      - generic [ref=e605]: 钱六、孙七
+                    - cell "钱老师" [ref=e606]:
+                      - generic [ref=e607]: 钱老师
+                    - cell "编辑 删除" [ref=e608]:
+                      - generic [ref=e609]:
+                        - button "编辑" [ref=e610] [cursor=pointer]:
+                          - generic [ref=e611]: 编辑
+                        - button "删除" [ref=e612] [cursor=pointer]:
+                          - generic [ref=e613]: 删除
+                  - row "3 环保先锋队 周八 2026003 13800000003 周八、吴九、郑十 孙老师 编辑 删除" [ref=e614]:
+                    - cell "3" [ref=e615]:
+                      - generic [ref=e617]: "3"
+                    - cell "环保先锋队" [ref=e618]:
+                      - generic [ref=e619]: 环保先锋队
+                    - cell "周八" [ref=e620]:
+                      - generic [ref=e621]: 周八
+                    - cell "2026003" [ref=e622]:
+                      - generic [ref=e623]: "2026003"
+                    - cell "13800000003" [ref=e624]:
+                      - generic [ref=e625]: "13800000003"
+                    - cell "周八、吴九、郑十" [ref=e626]:
+                      - generic [ref=e627]: 周八、吴九、郑十
+                    - cell "孙老师" [ref=e628]:
+                      - generic [ref=e629]: 孙老师
+                    - cell "编辑 删除" [ref=e630]:
+                      - generic [ref=e631]:
+                        - button "编辑" [ref=e632] [cursor=pointer]:
+                          - generic [ref=e633]: 编辑
+                        - button "删除" [ref=e634] [cursor=pointer]:
+                          - generic [ref=e635]: 删除
+          - generic [ref=e638]:
+            - generic [ref=e639]:
+              - generic [ref=e640]: 团队材料文件
+              - generic [ref=e641]:
+                - generic [ref=e643] [cursor=pointer]:
+                  - generic:
+                    - combobox [ref=e645]
+                    - generic [ref=e646]: 选择团队(留空=整包识别)
+                  - img [ref=e649]
+                - button "刷新" [ref=e651] [cursor=pointer]:
+                  - img [ref=e653]
+                  - generic [ref=e655]: 刷新
+            - generic [ref=e656]:
+              - img [ref=e658]
+              - paragraph [ref=e660]:
+                - text: 拖入
+                - strong [ref=e661]: 整个文件夹
+                - text: ",按子文件夹名自动识别团队"
+              - paragraph [ref=e662]:
+                - text: 或
+                - button "点击选择文件夹" [ref=e663] [cursor=pointer]:
+                  - generic [ref=e664]: 点击选择文件夹
+          - generic [ref=e666]:
+            - generic [ref=e667]:
+              - generic [ref=e668]: 材料任务
+              - generic [ref=e669]:
+                - generic [ref=e671] [cursor=pointer]:
+                  - generic:
+                    - combobox [ref=e673]
+                    - generic [ref=e674]: 按阶段筛选
+                  - img [ref=e677]
+                - button "批量生成任务" [ref=e679] [cursor=pointer]:
+                  - img [ref=e681]
+                  - generic [ref=e683]: 批量生成任务
+                - button "刷新" [ref=e684] [cursor=pointer]:
+                  - img [ref=e686]
+                  - generic [ref=e688]: 刷新
+            - generic [ref=e690]:
+              - table [ref=e692]:
+                - rowgroup [ref=e702]:
+                  - row "团队 材料 阶段 状态 负责干事 截止 文件 操作" [ref=e703]:
+                    - columnheader "团队" [ref=e704]:
+                      - generic [ref=e705]: 团队
+                    - columnheader "材料" [ref=e706]:
+                      - generic [ref=e707]: 材料
+                    - columnheader "阶段" [ref=e708]:
+                      - generic [ref=e709]: 阶段
+                    - columnheader "状态" [ref=e710]:
+                      - generic [ref=e711]: 状态
+                    - columnheader "负责干事" [ref=e712]:
+                      - generic [ref=e713]: 负责干事
+                    - columnheader "截止" [ref=e714]:
+                      - generic [ref=e715]: 截止
+                    - columnheader "文件" [ref=e716]:
+                      - generic [ref=e717]: 文件
+                    - columnheader "操作" [ref=e718]:
+                      - generic [ref=e719]: 操作
+              - generic [ref=e723]:
+                - table:
+                  - rowgroup
+                - generic [ref=e725]: 暂无数据
+            - generic [ref=e727]:
+              - img [ref=e729]
+              - paragraph [ref=e746]: 还没有任务,点击「批量生成任务」
+          - generic [ref=e748]:
+            - generic [ref=e749]:
+              - generic [ref=e750]: 答辩评审安排 · 评委 · 顺序 · 成绩
+              - generic [ref=e751]:
+                - button "新建答辩场次" [ref=e752] [cursor=pointer]:
+                  - img [ref=e754]
+                  - generic [ref=e756]: 新建答辩场次
+                - button "刷新" [ref=e757] [cursor=pointer]:
+                  - img [ref=e759]
+                  - generic [ref=e761]: 刷新
+            - generic [ref=e763]:
+              - img [ref=e765]
+              - paragraph [ref=e782]: 还没有答辩场次,可对勾选「需要答辩」的阶段新建场次
+              - button "新建答辩场次" [ref=e784] [cursor=pointer]:
+                - img [ref=e786]
+                - generic [ref=e788]: 新建答辩场次
+            - dialog "新建答辩场次" [ref=e957]:
+              - generic [ref=e958]:
+                - generic [ref=e959]:
+                  - heading "新建答辩场次" [level=2] [ref=e960]
+                  - button "关闭此对话框" [ref=e961] [cursor=pointer]:
+                    - img [ref=e963]
+                - generic [ref=e966]:
+                  - generic [ref=e967]:
+                    - generic [ref=e968]: "* 答辩阶段"
+                    - generic [ref=e971] [cursor=pointer]:
+                      - generic:
+                        - combobox "* 答辩阶段" [expanded] [active] [ref=e973]
+                        - generic [ref=e974]: 选择需要答辩的阶段
+                      - img [ref=e977]
+                  - generic [ref=e979]:
+                    - generic [ref=e980]: 答辩时间
+                    - textbox "答辩时间" [ref=e984]:
+                      - /placeholder: 如 2026-06-30 14:00
+                  - generic [ref=e985]:
+                    - generic [ref=e986]: 答辩地点
+                    - textbox "答辩地点" [ref=e990]:
+                      - /placeholder: 如 文科楼A301
+                  - group "评委" [ref=e991]:
+                    - generic [ref=e992]: 评委
+                    - button "添加评委" [ref=e995] [cursor=pointer]:
+                      - img [ref=e997]
+                      - generic [ref=e999]: 添加评委
+                - generic [ref=e1000]:
+                  - button "取消" [ref=e1001] [cursor=pointer]:
+                    - generic [ref=e1002]: 取消
+                  - button "确定" [ref=e1003] [cursor=pointer]:
+                    - generic [ref=e1004]: 确定
+          - generic [ref=e790]:
+            - generic [ref=e791]:
+              - generic [ref=e792]: 汇总表
+              - generic [ref=e793]:
+                - button "刷新" [ref=e794] [cursor=pointer]:
+                  - img [ref=e796]
+                  - generic [ref=e798]: 刷新
+                - button "下载 Excel" [ref=e799] [cursor=pointer]:
+                  - img [ref=e801]
+                  - generic [ref=e803]: 下载 Excel
+            - generic [ref=e806]:
+              - table [ref=e808]:
+                - rowgroup [ref=e817]:
+                  - row "序号 团队 队长 学号 联系方式 指导老师 审核备注" [ref=e818]:
+                    - columnheader "序号" [ref=e819]:
+                      - generic [ref=e820]: 序号
+                    - columnheader "团队" [ref=e821]:
+                      - generic [ref=e822]: 团队
+                    - columnheader "队长" [ref=e823]:
+                      - generic [ref=e824]: 队长
+                    - columnheader "学号" [ref=e825]:
+                      - generic [ref=e826]: 学号
+                    - columnheader "联系方式" [ref=e827]:
+                      - generic [ref=e828]: 联系方式
+                    - columnheader "指导老师" [ref=e829]:
+                      - generic [ref=e830]: 指导老师
+                    - columnheader "审核备注" [ref=e831]:
+                      - generic [ref=e832]: 审核备注
+              - table [ref=e837]:
+                - rowgroup [ref=e846]:
+                  - row "1 绿水青山队 张三 2026001 13800000001 赵老师" [ref=e847]:
+                    - cell "1" [ref=e848]:
+                      - generic [ref=e849]: "1"
+                    - cell "绿水青山队" [ref=e850]:
+                      - generic [ref=e851]: 绿水青山队
+                    - cell "张三" [ref=e852]:
+                      - generic [ref=e853]: 张三
+                    - cell "2026001" [ref=e854]:
+                      - generic [ref=e855]: "2026001"
+                    - cell "13800000001" [ref=e856]:
+                      - generic [ref=e857]: "13800000001"
+                    - cell "赵老师" [ref=e858]:
+                      - generic [ref=e859]: 赵老师
+                    - cell [ref=e860]
+                  - row "2 碳索未来队 钱六 2026002 13800000002 钱老师" [ref=e861]:
+                    - cell "2" [ref=e862]:
+                      - generic [ref=e863]: "2"
+                    - cell "碳索未来队" [ref=e864]:
+                      - generic [ref=e865]: 碳索未来队
+                    - cell "钱六" [ref=e866]:
+                      - generic [ref=e867]: 钱六
+                    - cell "2026002" [ref=e868]:
+                      - generic [ref=e869]: "2026002"
+                    - cell "13800000002" [ref=e870]:
+                      - generic [ref=e871]: "13800000002"
+                    - cell "钱老师" [ref=e872]:
+                      - generic [ref=e873]: 钱老师
+                    - cell [ref=e874]
+                  - row "3 环保先锋队 周八 2026003 13800000003 孙老师" [ref=e875]:
+                    - cell "3" [ref=e876]:
+                      - generic [ref=e877]: "3"
+                    - cell "环保先锋队" [ref=e878]:
+                      - generic [ref=e879]: 环保先锋队
+                    - cell "周八" [ref=e880]:
+                      - generic [ref=e881]: 周八
+                    - cell "2026003" [ref=e882]:
+                      - generic [ref=e883]: "2026003"
+                    - cell "13800000003" [ref=e884]:
+                      - generic [ref=e885]: "13800000003"
+                    - cell "孙老师" [ref=e886]:
+                      - generic [ref=e887]: 孙老师
+                    - cell [ref=e888]
+          - generic [ref=e891]:
+            - generic [ref=e892]:
+              - generic [ref=e893]: 汇总工作表可编辑
+              - generic [ref=e894]:
+                - generic [ref=e896]:
+                  - img [ref=e899]
+                  - textbox "搜索筛选" [ref=e901]
+                - button "导入Excel" [ref=e904] [cursor=pointer]:
+                  - button "导入Excel" [ref=e905]:
+                    - img [ref=e907]
+                    - generic [ref=e909]: 导入Excel
+                - button "加列" [ref=e910] [cursor=pointer]:
+                  - img [ref=e912]
+                  - generic [ref=e914]: 加列
+                - button "加行" [ref=e915] [cursor=pointer]:
+                  - img [ref=e917]
+                  - generic [ref=e919]: 加行
+                - button "下载Excel" [disabled] [ref=e920]:
+                  - img [ref=e922]
+                  - generic [ref=e924]: 下载Excel
+                - button "保存" [disabled] [ref=e925]:
+                  - generic [ref=e926]: 保存
+            - generic [ref=e928]:
+              - img [ref=e930]
+              - paragraph [ref=e947]: 还没有工作表,可导入Excel或手动加列加行
+              - button "导入Excel" [ref=e950] [cursor=pointer]:
+                - button "导入Excel" [ref=e951]:
+                  - img [ref=e953]
+                  - generic [ref=e955]: 导入Excel
+  - tooltip [ref=e1005]:
+    - listbox [ref=e1009]:
+      - option "结题答辩" [ref=e1010] [cursor=pointer]

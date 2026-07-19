@@ -22,6 +22,10 @@ from routes.tasks import bp as tasks_bp
 from routes.export import bp as export_bp
 from routes.files import bp as files_bp
 from routes.worksheets import bp as worksheets_bp
+from routes.dashboard import bp as dashboard_bp
+from routes.notifications import bp as notifications_bp
+from routes.defenses import bp as defenses_bp
+from routes.public import bp as public_bp
 
 
 def create_app():
@@ -46,6 +50,10 @@ def create_app():
     app.register_blueprint(export_bp)
     app.register_blueprint(files_bp)
     app.register_blueprint(worksheets_bp)
+    app.register_blueprint(dashboard_bp)
+    app.register_blueprint(notifications_bp)
+    app.register_blueprint(defenses_bp)
+    app.register_blueprint(public_bp)
 
     @app.get('/api/health')
     def health():

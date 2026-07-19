@@ -9,5 +9,29 @@
     "activated": true,
     "password_hash": "scrypt:32768:8:1$xhZ7ZVgvTV8V4Rqv$e20426f966df5c56009c50ef692dd2eb7babc445c781026f9e61813deecd3c252187283f314538b5ffd4eab63412f74380d21925fee4496a2f812d561b47cd12",
     "created_at": "2026-07-18T10:55:16.972538"
+  },
+  {
+    "id": "5e93e989f7a8",
+    "name": "赖小林",
+    "role": "副部长",
+    "student_id": "202421241234",
+    "contact": "",
+    "is_admin": false,
+    "activated": true,
+    "password_hash": "scrypt:32768:8:1$msxK7QTLrA6hTylY$1ae373c2ef02d6dc429832ff633d32a3ad7dcb72299dd65d905a146de45130e6a5d9ceed88c56030423719fe56eae79c537aa0e40a49ff079c27ec2944cd28b5",
+    "created_at": "2026-07-19T13:04:25.710720",
+    "password_set_at": "2026-07-19T13:04:46.510288"
+  },
+  {
+    "id": "191246d62527",
+    "name": "老马",
+    "role": "干事",
+    "student_id": "",
+    "contact": "",
+    "is_admin": false,
+    "activated": true,
+    "password_hash": "scrypt:32768:8:1$nKR9ZSkKPlWtPq9u$b422d0ae7a7a477b3660fafe30a9550d92250bdc601a1adc515bb07a92a5339aebfb03103625ca8d2d2949abd4184b688538860890771008f1b17dad57cdec48",
+    "created_at": "2026-07-19T13:06:58.932629",
+    "password_set_at": "2026-07-19T13:07:09.532903"
   }
 ]

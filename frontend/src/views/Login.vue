@@ -60,6 +60,10 @@
         </el-button>
       </el-form>
       <div class="hint" v-if="hint">{{ hint }}</div>
+      <div class="guest-entry">
+        <span class="guest-text">仅想了解项目进度?</span>
+        <el-button link type="primary" @click="router.push('/public/projects')">游客浏览 →</el-button>
+      </div>
     </el-card>
   </div>
 </template>
@@ -178,5 +182,19 @@ onMounted(loadCandidates)
   font-size: 12px;
   color: #bd7e00;
   text-align: center;
+}
+.guest-entry {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed #eaedf1;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.guest-text {
+  color: #737a87;
 }
 </style>

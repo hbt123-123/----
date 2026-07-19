@@ -28,7 +28,11 @@ Thumbs.db
 *.swp
 
 # === Claude Code 本地配置 ===
+.claude/
 .claude/settings.local.json
+.trae/settings.json
+.trae/exports/
+platform-preview/
 
 # === 环境变量/密钥 ===
 .env
@@ -39,3 +43,4 @@ backend/.env
 *.log
 /tmp/
 _test_*.py
+.playwright-cil/

@@ -53,6 +53,8 @@
 
     <TaskPanel v-if="project" :pid="project.id" :stages="stages" />
 
+    <DefensePanel v-if="project" :pid="project.id" :stages="stages" />
+
     <ExportPanel v-if="project" :pid="project.id" />
 
     <WorksheetPanel v-if="project" :pid="project.id" />
@@ -68,6 +70,7 @@ import * as usersApi from '@/api/users'
 import TeamPanel from '@/components/TeamPanel.vue'
 import FilePanel from '@/components/FilePanel.vue'
 import TaskPanel from '@/components/TaskPanel.vue'
+import DefensePanel from '@/components/DefensePanel.vue'
 import ExportPanel from '@/components/ExportPanel.vue'
 import WorksheetPanel from '@/components/WorksheetPanel.vue'
 

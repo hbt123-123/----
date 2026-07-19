@@ -27,6 +27,18 @@
             <el-tag :type="statusType(row.statuses[i])" size="small">{{ row.statuses[i] }}</el-tag>
           </template>
         </el-table-column>
+        <el-table-column
+          v-for="(dc, i) in defenseCols"
+          :key="'d' + i"
+          :label="dc.name"
+          width="120"
+        >
+          <template #default="{ row }">
+            <span :class="['score-val', { filled: row.defense_scores && row.defense_scores[i] }]">
+              {{ row.defense_scores && row.defense_scores[i] !== '' ? row.defense_scores[i] : '-' }}
+            </span>
+          </template>
+        </el-table-column>
         <el-table-column prop="remark" label="审核备注" min-width="160" />
       </el-table>
     </div>
@@ -41,6 +53,7 @@ import * as exportApi from '@/api/export'
 const props = defineProps({ pid: { type: String, default: '' } })
 const materials = ref([])
 const rows = ref([])
+const defenseCols = ref([])
 const loading = ref(false)
 
 function statusType(s) {
@@ -54,6 +67,7 @@ async function load() {
     const r = await exportApi.previewSummary(props.pid)
     materials.value = r.materials || []
     rows.value = r.rows || []
+    defenseCols.value = r.defense_cols || []
   } finally {
     loading.value = false
   }
@@ -85,5 +99,12 @@ onMounted(load)
 .actions {
   display: flex;
   gap: 8px;
+}
+.score-val {
+  color: #c7ccd6;
+}
+.score-val.filled {
+  color: #1664ff;
+  font-weight: 600;
 }
 </style>

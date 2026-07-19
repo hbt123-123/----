@@ -9,6 +9,25 @@ const routes = [
     meta: { public: true, title: '登录' },
   },
   {
+    path: '/public',
+    component: () => import('@/layouts/PublicLayout.vue'),
+    meta: { public: true },
+    children: [
+      {
+        path: 'projects',
+        name: 'public-projects',
+        component: () => import('@/views/PublicProjects.vue'),
+        meta: { public: true, title: '项目公开看板' },
+      },
+      {
+        path: 'projects/:id',
+        name: 'public-project-detail',
+        component: () => import('@/views/PublicProjectDetail.vue'),
+        meta: { public: true, title: '项目概览' },
+      },
+    ],
+  },
+  {
     path: '/',
     component: () => import('@/layouts/MainLayout.vue'),
     redirect: '/dashboard',
@@ -48,6 +67,12 @@ const routes = [
         name: 'profile',
         component: () => import('@/views/Profile.vue'),
         meta: { title: '个人中心' },
+      },
+      {
+        path: 'notifications',
+        name: 'notifications',
+        component: () => import('@/views/Notifications.vue'),
+        meta: { title: '通知中心' },
       },
     ],
   },

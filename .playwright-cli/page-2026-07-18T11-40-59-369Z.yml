@@ -1,0 +1,122 @@
+- generic [ref=e55]:
+  - complementary [ref=e56]:
+    - generic [ref=e58]: 创实部管理平台
+    - menubar [ref=e59]:
+      - menuitem "工作台" [ref=e60] [cursor=pointer]:
+        - img [ref=e62]
+        - generic [ref=e64]: 工作台
+      - menuitem "成员管理" [ref=e65] [cursor=pointer]:
+        - img [ref=e67]
+        - generic [ref=e69]: 成员管理
+      - menuitem "模板管理" [ref=e70] [cursor=pointer]:
+        - img [ref=e72]
+        - generic [ref=e74]: 模板管理
+      - menuitem "项目管理" [ref=e75] [cursor=pointer]:
+        - img [ref=e77]
+        - generic [ref=e79]: 项目管理
+      - menuitem "个人中心" [ref=e80] [cursor=pointer]:
+        - img [ref=e82]
+        - generic [ref=e84]: 个人中心
+  - generic [ref=e85]:
+    - generic [ref=e86]:
+      - img [ref=e88] [cursor=pointer]
+      - button "通知" [ref=e91] [cursor=pointer]:
+        - img [ref=e94]
+      - button "管理员 部长" [ref=e99] [cursor=pointer]:
+        - text: 管理员
+        - generic [ref=e101]: 部长
+        - img [ref=e103]
+    - main [ref=e105]:
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - generic [ref=e111]:
+            - img [ref=e114]
+            - generic [ref=e116]:
+              - generic [ref=e117]: "1"
+              - generic [ref=e118]: 进行中项目
+          - generic [ref=e122] [cursor=pointer]:
+            - img [ref=e125]
+            - generic [ref=e129]:
+              - generic [ref=e130]: "0"
+              - generic [ref=e131]: 待审核任务
+          - generic [ref=e135] [cursor=pointer]:
+            - img [ref=e138]
+            - generic [ref=e140]:
+              - generic [ref=e141]: "0"
+              - generic [ref=e142]: 逾期任务
+          - generic [ref=e146] [cursor=pointer]:
+            - img [ref=e149]
+            - generic [ref=e151]:
+              - generic [ref=e152]: "0"
+              - generic [ref=e153]: 临期任务(3天)
+        - generic [ref=e155]:
+          - generic [ref=e156]:
+            - generic [ref=e157]: 项目进度
+            - button "进入项目" [ref=e158] [cursor=pointer]:
+              - generic [ref=e159]: 进入项目
+          - generic [ref=e162] [cursor=pointer]:
+            - generic [ref=e163]:
+              - generic [ref=e164]:
+                - generic [ref=e165]: 答辩演示项目
+                - generic [ref=e167]: 进行中
+                - generic [ref=e169]: 校级
+              - generic [ref=e170]: 大创项目·2026·管理员
+            - generic [ref=e171]:
+              - generic [ref=e172]:
+                - generic [ref=e173]: 整体进度
+                - generic [ref=e174]: 0 / 0
+              - progressbar [ref=e175]:
+                - generic [ref=e178]: 0%
+            - generic [ref=e179]:
+              - generic [ref=e180]:
+                - generic [ref=e181]:
+                  - generic [ref=e182]: 申报阶段
+                  - generic [ref=e183]: 2026-10-31 23:59
+                - progressbar [ref=e184]:
+                  - generic [ref=e187]: 0%
+              - generic [ref=e188]:
+                - generic [ref=e189]:
+                  - generic [ref=e190]: 中期检查
+                  - generic [ref=e191]: 2027-03-31 23:59
+                - progressbar [ref=e192]:
+                  - generic [ref=e195]: 0%
+              - generic [ref=e196]:
+                - generic [ref=e197]:
+                  - generic [ref=e198]:
+                    - text: 结题答辩
+                    - generic [ref=e200]: 答辩
+                  - generic [ref=e201]: 2027-06-30 23:59
+                - progressbar [ref=e202]:
+                  - generic [ref=e205]: 0%
+            - generic [ref=e206]:
+              - generic [ref=e207]: 0 总任务
+              - generic [ref=e208]: 0 已通过
+              - generic [ref=e209]: 0 待审核
+              - generic [ref=e210]: 0 待办
+        - generic [ref=e212]:
+          - generic [ref=e214]: 人员负荷
+          - generic [ref=e215]:
+            - img [ref=e217]
+            - paragraph [ref=e234]: 暂无指派任务
+        - generic [ref=e235]:
+          - generic [ref=e238]:
+            - generic [ref=e239]:
+              - generic [ref=e240]: 逾期任务
+              - generic [ref=e243]: "0"
+            - generic [ref=e244]:
+              - img [ref=e246]
+              - paragraph [ref=e263]: 无逾期
+          - generic [ref=e266]:
+            - generic [ref=e267]:
+              - generic [ref=e268]: 临期任务（3 天内）
+              - generic [ref=e271]: "0"
+            - generic [ref=e272]:
+              - img [ref=e274]
+              - paragraph [ref=e291]: 无临期
+          - generic [ref=e294]:
+            - generic [ref=e295]:
+              - generic [ref=e296]: 待审核
+              - generic [ref=e299]: "0"
+            - generic [ref=e300]:
+              - img [ref=e302]
+              - paragraph [ref=e319]: 无待审核
