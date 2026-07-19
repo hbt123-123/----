@@ -33,6 +33,7 @@ Thumbs.db
 .trae/settings.json
 .trae/exports/
 platform-preview/
+.trae/
 
 # === 环境变量/密钥 ===
 .env
@@ -43,4 +44,4 @@ backend/.env
 *.log
 /tmp/
 _test_*.py
-.playwright-cil/
+.playwright-cli/
