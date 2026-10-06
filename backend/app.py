@@ -26,6 +26,7 @@ from routes.dashboard import bp as dashboard_bp
 from routes.notifications import bp as notifications_bp
 from routes.defenses import bp as defenses_bp
 from routes.public import bp as public_bp
+from routes.ai import bp as ai_bp
 
 
 def create_app():
@@ -54,6 +55,7 @@ def create_app():
     app.register_blueprint(notifications_bp)
     app.register_blueprint(defenses_bp)
     app.register_blueprint(public_bp)
+    app.register_blueprint(ai_bp)
 
     @app.get('/api/health')
     def health():

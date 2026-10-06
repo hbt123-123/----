@@ -57,6 +57,8 @@
 
     <ExportPanel v-if="project" :pid="project.id" />
 
+    <AIPanel v-if="project" :pid="project.id" :stages="stages" />
+
     <WorksheetPanel v-if="project" :pid="project.id" />
   </div>
 </template>
